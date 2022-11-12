@@ -1,7 +1,6 @@
 package funcionario.teste;
 
 import funcionario.Caixa;
-import funcionario.Funcionario;
 
 public class FuncionarioTeste {
     public static void main(String[] args) {
@@ -13,6 +12,5 @@ public class FuncionarioTeste {
 
         System.out.println(funcionario1.getBonus());
         System.out.println(funcionario1.getSalario());
-        System.out.printf(funcionario1.getTipo());
     }
 }

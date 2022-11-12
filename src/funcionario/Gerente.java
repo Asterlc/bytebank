@@ -8,10 +8,7 @@ public class Gerente extends Funcionario {
     }
 
     public boolean autentica(int senha) {
-        if (this.senha == senha) {
-            return true;
-        }
-        return false;
+        return this.senha == senha;
     }
 
     @Override
@@ -47,11 +44,6 @@ public class Gerente extends Funcionario {
     @Override
     public void setSalario(double salario) {
         super.salario = salario;
-    }
-
-    @Override
-    public String getTipo() {
-        return null;
     }
 
     public void setSenha(int senha) {

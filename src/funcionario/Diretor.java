@@ -36,8 +36,4 @@ public class Diretor extends Funcionario {
         super.salario = salario;
     }
 
-    @Override
-    public String getTipo() {
-        return null;
-    }
 }
