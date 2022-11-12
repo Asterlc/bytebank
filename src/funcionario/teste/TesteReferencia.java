@@ -1,7 +1,7 @@
 package funcionario.teste;
 
 import funcionario.Diretor;
-import funcionario.Funcionario;
+import funcionario.Caixa;
 import funcionario.Gerente;
 import recursos.ControleBonus;
 
@@ -9,7 +9,7 @@ public class TesteReferencia {
     public static void main(String[] args) {
         Diretor d1 = new Diretor();
         Gerente g1 = new Gerente();
-        Funcionario f1 = new Funcionario();
+        Caixa f1 = new Caixa();
         ControleBonus controle = new ControleBonus();
         d1.setNome("Diretor");
         d1.setSalario(9000);

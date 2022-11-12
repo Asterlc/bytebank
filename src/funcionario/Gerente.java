@@ -16,7 +16,7 @@ public class Gerente extends Funcionario {
 
     @Override
     public double getBonus() {
-        return (super.getSalario() + super.getBonus());
+        return (getSalario() + getBonus());
     }
 
     public void setSenha(int senha) {

@@ -12,7 +12,7 @@ public class TestaMetodo {
         Conta conta2 = new Conta(1111,113396);
         conta2.depositar(1000);
 
-        conta1.transferir(500, conta1, conta2);
+        conta1.transferir(500, conta2);
         System.out.println(conta1.getSaldo());
         System.out.println(conta2.getSaldo());
         conta2.sacar(1100);

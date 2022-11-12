@@ -1,52 +1,27 @@
 package funcionario;
 
-public class Funcionario {
+public abstract class Funcionario {
     private String nome;
     private String cpf;
     private double salario;
     private String tipo;
     private double bonusValor = 0.2;
 
-    public Funcionario() {
+    public abstract double getBonus();
 
-    }
+    public abstract String getNome();
 
-    public double getBonus() {
-        return (this.salario * 0.1);
-    }
+    public abstract void setNome(String nome);
 
-    public String getNome() {
-        return nome;
-    }
+    public abstract String getCpf();
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public abstract void setCpf(String cpf);
 
-    public String getCpf() {
-        return cpf;
-    }
+    public abstract double getSalario();
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
+    public abstract void setSalario(double salario);
 
-    public double getSalario() {
-        return salario;
-    }
+    public abstract double salarioComBonus();
 
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
-    public double salarioComBonus() {
-        if (this.salario > 0) {
-            return this.salario += getBonus();
-        }
-        return this.salario;
-    }
-
-    public String getTipo(){
-        return this.tipo;
-    }
+    public abstract String getTipo();
 }

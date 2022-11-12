@@ -7,6 +7,7 @@ public class TestaBanco {
     public static void main(String[] args) {
         Cliente cliente1 = new Cliente();
         Conta cliente1Conta = new Conta(1111,111456);
+        Conta cliente2Conta = new Conta(1111,111568);
 
         cliente1Conta.setTitular(cliente1);
         cliente1Conta.getTitular().setNome("Lucas Sousa");
@@ -17,5 +18,6 @@ public class TestaBanco {
 
         System.out.println(cliente1Conta.getSaldo());
         System.out.println(cliente1Conta.getTitular().getNome());
+        System.out.println(cliente1Conta.getTotalContas());
     }
 }

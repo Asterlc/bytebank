@@ -1,10 +1,11 @@
 package funcionario.teste;
 
+import funcionario.Caixa;
 import funcionario.Funcionario;
 
 public class FuncionarioTeste {
     public static void main(String[] args) {
-        Funcionario funcionario1 = new Funcionario();
+        Caixa funcionario1 = new Caixa();
 
         funcionario1.setNome("Nicolas");
         funcionario1.setCpf("39743158799");

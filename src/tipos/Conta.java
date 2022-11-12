@@ -5,10 +5,12 @@ public class Conta {
     private int agencia;
     private int numero;
     private Cliente titular;
+    private static int totalContas = 0;
 
     public Conta(int agencia, int numero){
         this.agencia = agencia;
         this.numero=numero;
+        this.totalContas++;
     }
 
     public boolean depositar(double valor) {
@@ -29,9 +31,9 @@ public class Conta {
         }
     }
 
-    public void transferir(double valor, Conta remetente, Conta destinatario) {
-        if (remetente.saldo >= valor) {
-            remetente.saldo -= valor;
+    public void transferir(double valor, Conta destinatario) {
+        if (this.saldo >= valor) {
+            this.saldo -= valor;
             destinatario.saldo += valor;
         } else {
             System.out.println("Valor indisponível para transferẽncia, verifique sua conta");
@@ -73,5 +75,9 @@ public class Conta {
 
     public void setTitular(Cliente titular) {
         this.titular = titular;
+    }
+
+    public static int getTotalContas(){
+        return totalContas;
     }
 }
