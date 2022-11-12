@@ -5,17 +5,32 @@ public abstract class Funcionario {
     protected String cpf;
     protected double salario;
 
-    public abstract double getBonus();
+    public double getBonus(){
+        return this.salario * 0.1;
 
-    public abstract String getNome();
+    };
 
-    public abstract void setNome(String nome);
+    public  String getNome(){
+        return this.nome;
+    }
 
-    public abstract String getCpf();
+    public void setNome(String nome){
+        this.nome = nome;
+    }
 
-    public abstract void setCpf(String cpf);
+    public String getCpf(){
+        return this.cpf;
+    }
 
-    public abstract double getSalario();
+    public void setCpf(String cpf){
+        this.cpf = cpf;
+    }
 
-    public abstract void setSalario(double salario);
+    public double getSalario(){
+        return this.salario;
+    }
+
+    public void setSalario(double salario){
+        this.salario = salario;
+    }
 }

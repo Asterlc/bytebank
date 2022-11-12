@@ -1,39 +1,22 @@
 package funcionario;
 
-public class Diretor extends Funcionario {
+import informacao.Autenticavel;
+
+public class Diretor extends Funcionario implements Autenticavel {
+    private int senha;
+
     @Override
     public double getBonus() {
         return getSalario() * 1.05;
     }
 
     @Override
-    public String getNome() {
-        return super.nome;
+    public void setSenha(int senha) {
+        this.senha = senha;
     }
 
     @Override
-    public void setNome(String nome) {
-    super.nome = nome;
+    public boolean autentica(int senha) {
+        return this.senha == senha;
     }
-
-    @Override
-    public String getCpf() {
-        return super.cpf;
-    }
-
-    @Override
-    public void setCpf(String cpf) {
-        super.cpf = cpf;
-    }
-
-    @Override
-    public double getSalario() {
-        return super.salario;
-    }
-
-    @Override
-    public void setSalario(double salario) {
-        super.salario = salario;
-    }
-
 }

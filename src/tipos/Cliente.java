@@ -1,9 +1,12 @@
 package tipos;
 
-public class Cliente {
+import informacao.Autenticavel;
+
+public class Cliente implements Autenticavel {
     private String nome;
     private String document;
     private String profissao;
+    private int senha;
 
     public String getNome() {
         return nome;
@@ -27,5 +30,15 @@ public class Cliente {
 
     public void setProfissao(String profissao) {
         this.profissao = profissao;
+    }
+
+    @Override
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
+
+    @Override
+    public boolean autentica(int senha) {
+        return this.senha == senha;
     }
 }
