@@ -13,7 +13,6 @@ public class FuncionarioTeste {
 
         System.out.println(funcionario1.getBonus());
         System.out.println(funcionario1.getSalario());
-        System.out.println(funcionario1.salarioComBonus());
         System.out.printf(funcionario1.getTipo());
     }
 }

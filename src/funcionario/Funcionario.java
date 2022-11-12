@@ -1,11 +1,11 @@
 package funcionario;
 
 public abstract class Funcionario {
-    private String nome;
-    private String cpf;
-    private double salario;
-    private String tipo;
-    private double bonusValor = 0.2;
+    protected String nome;
+    protected String cpf;
+    protected double salario;
+    protected String tipo;
+    protected double bonusValor = 0.2;
 
     public abstract double getBonus();
 
@@ -20,8 +20,6 @@ public abstract class Funcionario {
     public abstract double getSalario();
 
     public abstract void setSalario(double salario);
-
-    public abstract double salarioComBonus();
 
     public abstract String getTipo();
 }
