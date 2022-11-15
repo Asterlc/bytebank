@@ -1,10 +1,11 @@
 package tipos.teste;
 
+import excessoes.ContaExcessao;
 import tipos.ContaCorrente;
 import tipos.ContaPoupanca;
 
 public class TesteConta {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ContaExcessao {
         ContaCorrente contaCorrente = new ContaCorrente(111,2345);
         ContaPoupanca contaPoupanca = new ContaPoupanca(111,2345);
 

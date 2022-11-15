@@ -1,11 +1,12 @@
 package tipos.teste;
 
+import excessoes.ContaExcessao;
 import tipos.Conta;
 
 import java.sql.SQLOutput;
 
 public class TesteReferencia {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ContaExcessao {
         Conta primeiraConta = new Conta(1111,117489);
         primeiraConta.depositar(200);
 

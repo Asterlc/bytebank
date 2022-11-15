@@ -1,5 +1,7 @@
 package tipos;
 
+import excessoes.ContaExcessao;
+
 public class Conta {
     private double saldo;
     private int agencia;
@@ -7,7 +9,7 @@ public class Conta {
     private Cliente titular;
     private static int totalContas = 0;
 
-    public Conta(int agencia, int numero){
+    public Conta(int agencia, int numero) throws ContaExcessao {
         this.agencia = agencia;
         this.numero=numero;
         this.totalContas++;
@@ -21,7 +23,7 @@ public class Conta {
         return false;
     }
 
-    public boolean sacar(double valor) {
+    public boolean sacar(double valor) throws ContaExcessao {
         if (this.saldo >= valor) {
             this.saldo -= valor;
             return true;

@@ -1,7 +1,9 @@
 package tipos;
 
+import excessoes.ContaExcessao;
+
 public class CriarConta {
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws ContaExcessao {
         Conta primeiraConta = new Conta(1111,112022);
         primeiraConta.depositar(200);
         //primeiraConta.agencia= 1111;
